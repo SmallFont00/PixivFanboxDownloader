@@ -350,7 +350,7 @@ class DownloadControl {
     // 复位这个任务的状态
     this.setDownloadedIndex(task.index, -1)
     // 建立下载任务，再次下载它
-    this.createDownload(task.progressBarIndex, err == "SERVER_FAILED")
+    this.createDownload(task.progressBarIndex, err === "SERVER_FAILED")
   }
 
   private downloadSuccess(data: DonwloadSuccessData) {
